@@ -12,6 +12,15 @@
       android:layout_height="match_parent"
       />
 
+  <TextView android:id="@+id/nointernet"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:padding="15dp"
+      android:layout_gravity="center"
+      android:gravity="center"
+      android:textSize="20sp"
+      android:visibility="gone"/>
+
   <com.melnykov.fab.FloatingActionButton
       android:id="@+id/fab"
       android:layout_width="wrap_content"
