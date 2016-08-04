@@ -158,12 +158,14 @@ public class MyGraphActivity extends AppCompatActivity implements OnChartGesture
                     onDownloadFailed();
                 }
             }
+
             @Override
             public void onFailure(Request request, IOException e) {
                 onDownloadFailed();
             }
         });
     }
+
     private void onDownloadCompleted() {
         MyGraphActivity.this.runOnUiThread(new Runnable() {
             @Override
@@ -174,7 +176,7 @@ public class MyGraphActivity extends AppCompatActivity implements OnChartGesture
 
                 ArrayList<Entry> val = new ArrayList<Entry>();
                 for (int i = 0; i < labels.size(); i++) {
-                    val.add(new Entry( values.get(i), i));
+                    val.add(new Entry(values.get(i), i));
                 }
 
                 LineDataSet set = new LineDataSet(val, "Stocks Data");
@@ -193,18 +195,15 @@ public class MyGraphActivity extends AppCompatActivity implements OnChartGesture
                 for (int i = 0; i < labels.size(); i++) {
                     dates.add(i, labels.get(i));
                 }
-
-                ArrayList<ILineDataSet> datasets = new ArrayList<ILineDataSet>();
-                datasets.add(set);
                 LineData data = new LineData(labels, set);
                 mChart.setData(data);
-//                lineChart.addSeries(series);
                 mChart.invalidate();
 
                 isLoaded = true;
             }
         });
     }
+
     private void onDownloadFailed() {
         MyGraphActivity.this.runOnUiThread(new Runnable() {
             @Override
