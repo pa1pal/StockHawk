@@ -13,4 +13,5 @@
   <string name="no_symbol">No Stock Found</string>
   <string name="nostock">No Stock present. Add stock.</string>
   <string name="nointernet">Uh-oh! This app requires an internet connection</string>
+  <string name="fab_desc">Search for stock symbol</string>
 </resources>
