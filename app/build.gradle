@@ -35,4 +35,5 @@ dependencies {
     compile 'net.simonvt.schematic:schematic:0.6.3'
     compile 'com.melnykov:floatingactionbutton:1.2.0'
     compile 'com.android.support:design:24.0.0'
+    compile 'com.github.PhilJay:MPAndroidChart:v2.2.4'
 }

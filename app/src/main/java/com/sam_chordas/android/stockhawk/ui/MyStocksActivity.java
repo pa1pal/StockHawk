@@ -54,6 +54,7 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
   private Cursor mCursor;
   boolean isConnected;
   private TextView statusText;
+  String ticker;
 
   @Override
   protected void onCreate(Bundle savedInstanceState) {
@@ -89,6 +90,10 @@ public class MyStocksActivity extends AppCompatActivity implements LoaderManager
               @Override public void onItemClick(View v, int position) {
                 //TODO:
                 // do something on item click
+                ticker = ((TextView) v.findViewById(R.id.stock_symbol)).getText().toString();
+                Intent intent = new Intent(MyStocksActivity.this , MyGraphActivity.class);
+                intent.putExtra("ticker",ticker);
+                startActivity(intent);
               }
             }));
 
