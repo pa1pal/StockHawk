@@ -6,7 +6,8 @@
     <com.github.mikephil.charting.charts.LineChart
         android:id="@+id/linechart"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:contentDescription="@string/chart_desc"/>
 
     <ProgressBar
         android:id="@+id/progressbar"
